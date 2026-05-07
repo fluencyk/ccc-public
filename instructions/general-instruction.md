@@ -24,7 +24,7 @@ AI Models: <br>
 
 ### - 2nd-level CMDs -
 Intents: <br>
--- Doubao, you may explain here to show how this level's commands work. <br>
+!Doubao, you may explain here to show how this level's commands work. <br>
 
 1. 'dsm' <br>
 CASE: 'doubao dsm' <br>
@@ -78,4 +78,3 @@ For "grok extract -NLP", the model Grok may say: "这个对话的上下文中没
 */ <br>
 #### Awaiting the Updates of More Instructive Designs
 <br>
- 
