@@ -50,9 +50,9 @@ Explanation:!Doubao, fulfill your best explanation of this CMD. <br>
 <b>Specifications:</b> <br>
 First-class Attributes, 3rd-level Commands, represent the third command level, marked with a single leading horizontal dash. They are used to define formal, mandatory baseline rules that all assigned agents must strictly follow. These rules carry official instructional validity, need to be fully parsed, understood and executed, and cannot be ignored or treated as ordinary remarks. <br>
 
-/* 1. '-vibe-coding' == The model identifies "vibe-coding" related content to follow the 2nd-level ops as a content-scope-identifier. <br>
+<!-- /* 1. '-vibe-coding' == The model identifies "vibe-coding" related content to follow the 2nd-level ops as a content-scope-identifier. <br>
 NOTE: There is a '-' working as a prefix for the parameter to mean this is a 3rd-level ops unit in the whole command-line. <br>
-NOTE: The 3rd-level ops CMD unit is a flexible entity, which means it may not only present as a CMD unit-like ops string but also some natural semantic words for LLMs */ <br>
+NOTE: The 3rd-level ops CMD unit is a flexible entity, which means it may not only present as a CMD unit-like ops string but also some natural semantic words for LLMs */ <br> -->
 
 ### - 4th-level CMDs / 2nd-Class Attributes -
 Scaling or Weighting Fine-Tuning Controllability <br>
