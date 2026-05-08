@@ -14,7 +14,7 @@ Note: We adopt dedicated encapsulation markers to distinguish formal instruction
 
 ## -- Commands Design --
 ### - 1st-level CMDs -
-<b>Intelligent Agents Designation</b> <br>
+<b>* Intelligent Agents Designation *</b> <br>
 First-level commands are designed for intelligent agent designation. Their core function is to explicitly assign and specify which AI agent is authorized to read, parse, and execute the subsequent instruction segments. By clearly naming designated agents such as Doubao, GPT, Grok, Claude, and locally deployed models like TinyLlama, this level removes ambiguity in multi-agent collaboration. It limits task execution strictly to the assigned agent, avoiding irrelevant agents misreading, interfering, or responding to unassigned tasks. <br>
 
 <b>AI Models:</b> <br>
@@ -25,8 +25,8 @@ First-level commands are designed for intelligent agent designation. Their core 
 5. 'claude' <br>
 
 ### - 2nd-level CMDs -
-<b>Intents:</b> <br>
-Second-level commands serve as intent definition instructions. They define the core goal, task intention and work scope of the current conversation session. After the first level designates the responsible AI agent, the second level sets the overall task direction. All following rule levels and operation steps must align with the defined intent, ensuring the whole workflow stays on track without context drift or task deviation. <br>
+<b>* Intents *</b> <br>
+Second-level commands serve as <b>intent definition instructions</b>. They define the core goal, task intention, and work scope of the current conversation session. After the first level designates the responsible AI agent, the second level sets the overall task direction. All following rule levels and operation steps must align with the defined intent, ensuring the whole workflow stays on track without context drift or task deviation. <br>
 
 1. 'dsm' <br>
 CASE: 'doubao dsm' <br>
@@ -47,24 +47,25 @@ CASE: 'doubao topic -sub' <br>
 Explanation:!Doubao, fulfill your best explanation of this CMD. <br>
 
 ### - 3rd-level CMDs / 1st-Class Attributes -
-<b>Specifications:</b> <br>
-First-class Attributes, 3rd-level Commands, represent the third command level, marked with a single leading horizontal dash. They are used to define formal, mandatory baseline rules that all assigned agents must strictly follow. These rules carry official instructional validity, need to be fully parsed, understood and executed, and cannot be ignored or treated as ordinary remarks. <br>
+<b>* Specifications *</b> <br>
+First-class attributes, as well as the 3rd-level commands, represent the third command level, marked with a <b>single leading horizontal dash</b>. They are used to define formal, mandatory baseline rules that all assigned agents must strictly follow. These rules carry official instructional validity, need to be fully parsed, understood, and executed, and cannot be ignored or treated as ordinary remarks. <br>
 
 <!-- /* 1. '-vibe-coding' == The model identifies "vibe-coding" related content to follow the 2nd-level ops as a content-scope-identifier. <br>
 NOTE: There is a '-' working as a prefix for the parameter to mean this is a 3rd-level ops unit in the whole command-line. <br>
 NOTE: The 3rd-level ops CMD unit is a flexible entity, which means it may not only present as a CMD unit-like ops string but also some natural semantic words for LLMs */ <br> -->
 
 ### - 4th-level CMDs / 2nd-Class Attributes -
-Scaling or Weighting Fine-Tuning Controllability <br>
-!Doubao, you may explain here to show how this level's commands work. <br>
+<b>* Scalable or Weightable Fine-Tuning Controllability *</b> <br>
+Second-class attributes, as well as the 4th-level commands, belong to the fourth command level, marked with <b>double continuous leading horizontal dashes</b>. They act as supplementary explanations, additional notes, and scope constraints for first-class rules. They are subordinate and interpretative content, assisting agents in better understanding the background and boundary of the main rules, while still belonging to valid instruction content that should be referenced and comprehended. <br>
 
-/** 1. '--long' == The model follows the upper ops to provide a long-scale output for the user. <br>
+<!-- /** 1. '--long' == The model follows the upper ops to provide a long-scale output for the user. <br>
 2. '--medium' == To provide a medium-scale output. <br>
 3. '--short' == To provide a short-scale output. <br>
 4. '--precise' == The model provides a very tiny granularity-level precision quality output. <br>
 5. '--draft' == The model provides a simple and easily understood short output. <br>
 6. '--brainstormed' == The model flexibly provides a mind-deep-dig and extented output. <br>
-NOTE: There is a '--' working as a prefix for the parameter to mean this is a 3rd-level ops unit in the whole command-line. */ <br>
+NOTE: There is a '--' working as a prefix for the parameter to mean this is a 3rd-level ops unit in the whole command-line. */ -->
+<br>
 
 ## CRITICAL NOTE:
 Pass... 
