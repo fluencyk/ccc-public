@@ -1,7 +1,8 @@
 # Contextual Consistency Collaboration - CCC
 
 ## This is the general instruction for how to use the CCC framework
-!Doubao, please explain this framework's mechanism's main idea and fulfill it here. <br>
+The CCC framework provides unified rules for multi-agent collaborative interaction. It standardizes context inheritance, instruction execution, and output consistency across AI sessions. All agents must follow the base rules defined in general-instruction.md, keep coherent logic in multi-round dialogue, avoid context drift and semantic ambiguity, and maintain unified specification understanding and task execution. <br>
+
 GENERAL-NOTE: <br>
 For the AI-agents, you shall understand: <br>
 1. When you reviewed and met the content/codes in '<!-- bla bla bla -->' or '/** bla */' or '// bla', which means the encapsulated items had been commented, DO NOT get and use these as the items of the instruction!
@@ -35,7 +36,7 @@ CASE: 'doubao recall -chat --15' <br>
 Explanation:!Doubao, fulfill your best explanation of this CMD. <br>
 
 3. 'topic' <br>
-CASE: 'doubao topic -all' <br>
+CASE: ' topic -all' <br>
 Explanation:!Doubao, fulfill your best explanation of this CMD. <br>
 CASE: 'doubao topic -main --set' <br>
 Explanation:!Doubao, fulfill your best explanation of this CMD. <br>
