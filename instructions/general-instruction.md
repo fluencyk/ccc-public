@@ -4,8 +4,10 @@
 The CCC framework provides unified rules for multi-agent collaborative interaction. It standardizes context inheritance, instruction execution, and output consistency across AI sessions. All agents must follow the base rules defined in general-instruction.md, keep coherent logic in multi-round dialogue, avoid context drift and semantic ambiguity, and maintain unified specification understanding and task execution. <br>
 
 ### GENERAL NOTE:
+<span style="color:blue;">
 For all AI agents: <br>
 When you read and parse content wrapped in '//' or '/* */' markers, treat these segments as human comments only. Do not parse, interpret, extract, or treat commented content as formal instructional rules or executable task items.
+</span>
 
 ## 4 levels ops-commanding mechanism:
 This four-layer command system is deliberately designed for the CCC framework and its supporting CLI instruction set to achieve clear task partitioning and cross-agent compatibility. The first layer is agent designation, used to explicitly assign which AI agent shall receive and execute the following instructions, such as specifying Doubao, GPT, and other individual agents. The second layer belongs to the intent command, which defines the core purpose and semantic intention of the current session task. The third and fourth layers correspond to the first-class rule and the second-class rule, respectively: the first-class rule starts with a single horizontal dash, while the second-class rule starts with double continuous horizontal dashes, forming a standardized hierarchical marking system for all agents to recognize and follow. <br>
@@ -18,11 +20,19 @@ Note: We adopt dedicated encapsulation markers to distinguish formal instruction
 First-level commands are designed for intelligent agent designation. Their core function is to explicitly assign and specify which AI agent is authorized to read, parse, and execute the subsequent instruction segments. By clearly naming designated agents such as Doubao, GPT, Grok, Claude, and locally deployed models like TinyLlama, this level removes ambiguity in multi-agent collaboration. It limits task execution strictly to the assigned agent, avoiding irrelevant agents misreading, interfering, or responding to unassigned tasks. <br>
 
 <b>Intelligent Agents / AI Models:</b> <br>
-1. 'gpt' <br>
-2. 'doubao' <br>
-3. 'grok' <br>
-4. 'gemini' <br>
-5. 'claude' <br>
+#### 1. 'gpt' <br>
+CASE: 'gpt dsm' <br>
+/* Note: The 'dsm' which follows the 1st-level command is a 2nd-level command that has been explained below. */
+Explanation: <br>
+This is a first-level command for intelligent agent designation. It explicitly assigns the subsequent instruction tasks to the GPT model only, restricting other AI agents from parsing, responding or interfering with the following session content. <br>
+
+#### 2. doubao
+
+#### 3. grok
+
+#### 4. 'gemini
+
+#### 5. claude
 
 ### - 2nd-level CMDs -
 <b>* Intents *</b> <br>
