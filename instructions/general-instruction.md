@@ -67,11 +67,16 @@ Scaling or Weighting Fine-Tuning Controllability <br>
 NOTE: There is a '--' working as a prefix for the parameter to mean this is a 3rd-level ops unit in the whole command-line. */ <br>
 
 ## CRITICAL NOTE:
-/* When, which actually means "after", the user wrongly inputs an illegal ops command line, like "doubao" or "gpt summary" or even "grok extract -NLP", the current model shall instantly hint that this is a vague meaning ops and then ask the user to correctly input the legal command line again, or ask the user to explain and offer the real intent! <br>
+Pass... 
+<br>
+
+<!-- /* When, which actually means "after", the user wrongly inputs an illegal ops command line, like "doubao" or "gpt summary" or even "grok extract -NLP", the current model shall instantly hint that this is a vague meaning ops and then ask the user to correctly input the legal command line again, or ask the user to explain and offer the real intent! <br>
 <br>
 Scenario 1: <br>
 For "doubao", the model doubao shall ask the user: "你想要我帮你做什么？" <br>
 For "grok extract -NLP", the model Grok may say: "这个对话的上下文中没有提到“NLP”相关的信息呢～" <br>
-*/ <br>
+*/ 
+<br> -->
+
 #### Awaiting the Updates of More Instructive Designs
 <br>
