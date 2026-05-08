@@ -14,10 +14,10 @@ Note: We adopt dedicated encapsulation markers to distinguish formal instruction
 
 ## -- Commands Design --
 ### - 1st-level CMDs -
-Intelligent Agents Designation / Designate AI Models: <br>
-!Doubao, you may explain here to show how this level's commands work. <br>
+<b>Intelligent Agents Designation</b> <br>
+First-level commands are designed for intelligent agent designation. Their core function is to explicitly assign and specify which AI agent is authorized to read, parse, and execute the subsequent instruction segments. By clearly naming designated agents such as Doubao, GPT, Grok, Claude, and locally deployed models like TinyLlama, this level removes ambiguity in multi-agent collaboration. It limits task execution strictly to the assigned agent, avoiding irrelevant agents misreading, interfering, or responding to unassigned tasks. <br>
 
-AI Models: <br>
+<b>AI Models:</b> <br>
 1. 'gpt' <br>
 2. 'doubao' <br>
 3. 'grok' <br>
@@ -25,8 +25,8 @@ AI Models: <br>
 5. 'claude' <br>
 
 ### - 2nd-level CMDs -
-Intents: <br>
-!Doubao, you may explain here to show how this level's commands work. <br>
+<b>Intents:</b> <br>
+Second-level commands serve as intent definition instructions. They define the core goal, task intention and work scope of the current conversation session. After the first level designates the responsible AI agent, the second level sets the overall task direction. All following rule levels and operation steps must align with the defined intent, ensuring the whole workflow stays on track without context drift or task deviation. <br>
 
 1. 'dsm' <br>
 CASE: 'doubao dsm' <br>
@@ -46,16 +46,11 @@ Explanation:!Doubao, fulfill your best explanation of this CMD. <br>
 CASE: 'doubao topic -sub' <br>
 Explanation:!Doubao, fulfill your best explanation of this CMD. <br>
 
-
-/** 1. 'summary' == The model summarizes some specified contextual content discussed in the conversational session. <br>
-2. 'extract' == The model extracts some information from the conversational session. <br>
-NOTE: For now, temporality, the commands 'summary' and 'extract' may have the same meaning and ops intent for the LLMs' understanding and demands; we will update later. */ <br>
-
 ### - 3rd-level CMDs / 1st-Class Attributes -
-Specifications: <br>
-!Doubao, you may explain here to show how this level's commands work. <br>
+<b>Specifications:</b> <br>
+First-class Attributes, 3rd-level Commands, represent the third command level, marked with a single leading horizontal dash. They are used to define formal, mandatory baseline rules that all assigned agents must strictly follow. These rules carry official instructional validity, need to be fully parsed, understood and executed, and cannot be ignored or treated as ordinary remarks. <br>
 
-/** 1. '-vibe-coding' == The model identifies "vibe-coding" related content to follow the 2nd-level ops as a content-scope-identifier. <br>
+/* 1. '-vibe-coding' == The model identifies "vibe-coding" related content to follow the 2nd-level ops as a content-scope-identifier. <br>
 NOTE: There is a '-' working as a prefix for the parameter to mean this is a 3rd-level ops unit in the whole command-line. <br>
 NOTE: The 3rd-level ops CMD unit is a flexible entity, which means it may not only present as a CMD unit-like ops string but also some natural semantic words for LLMs */ <br>
 
@@ -72,7 +67,7 @@ Scaling or Weighting Fine-Tuning Controllability <br>
 NOTE: There is a '--' working as a prefix for the parameter to mean this is a 3rd-level ops unit in the whole command-line. */ <br>
 
 ## CRITICAL NOTE:
-/** When, which actually means "after", the user wrongly inputs an illegal ops command line, like "doubao" or "gpt summary" or even "grok extract -NLP", the current model shall instantly hint that this is a vague meaning ops and then ask the user to correctly input the legal command line again, or ask the user to explain and offer the real intent! <br>
+/* When, which actually means "after", the user wrongly inputs an illegal ops command line, like "doubao" or "gpt summary" or even "grok extract -NLP", the current model shall instantly hint that this is a vague meaning ops and then ask the user to correctly input the legal command line again, or ask the user to explain and offer the real intent! <br>
 <br>
 Scenario 1: <br>
 For "doubao", the model doubao shall ask the user: "你想要我帮你做什么？" <br>
