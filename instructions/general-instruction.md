@@ -4,7 +4,7 @@
 The CCC framework provides unified rules for multi-agent collaborative interaction. It standardizes context inheritance, instruction execution, and output consistency across AI sessions. All agents must follow the base rules defined in general-instruction.md, keep coherent logic in multi-round dialogue, avoid context drift and semantic ambiguity, and maintain unified specification understanding and task execution. <br>
 
 ### GENERAL NOTE:
-For all AI agents: When you read and parse content wrapped in //, /* */, or -- markers, treat these segments as human comments only. Do not parse, interpret, extract, or treat commented content as formal instructional rules or executable task items.
+For all AI agents: When you read and parse content wrapped in '//' or '/* */' markers, treat these segments as human comments only. Do not parse, interpret, extract, or treat commented content as formal instructional rules or executable task items.
 
 ## 4 levels ops-commanding mechanism:
 !Doubao, you may augment something here, describe the mechanism and sub-mechanisms down here. <br>
