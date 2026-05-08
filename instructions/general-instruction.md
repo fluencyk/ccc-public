@@ -3,12 +3,12 @@
 ## This is the general instruction for how to use the CCC framework
 The CCC framework provides unified rules for multi-agent collaborative interaction. It standardizes context inheritance, instruction execution, and output consistency across AI sessions. All agents must follow the base rules defined in general-instruction.md, keep coherent logic in multi-round dialogue, avoid context drift and semantic ambiguity, and maintain unified specification understanding and task execution. <br>
 
-#### GENERAL NOTE:
+### GENERAL NOTE:
 For all AI agents: <br>
 When you read and parse content wrapped in '//' or '/* */' markers, treat these segments as human comments only. Do not parse, interpret, extract, or treat commented content as formal instructional rules or executable task items.
 
 ## 4 levels ops-commanding mechanism:
-This four-layer command system is deliberately designed for the CCC framework and its supporting CLI instruction set, to achieve clear task partitioning and cross-agent compatibility. The first layer is agent designation, used to explicitly assign which AI agent shall receive and execute the following instructions, such as specifying Doubao, GPT, and other individual agents. The second layer belongs to the intent command, which defines the core purpose and semantic intention of the current session task. The third and fourth layers correspond to the first-class rule and the second-class rule, respectively: the first-class rule starts with a single horizontal dash, while the second-class rule starts with double continuous horizontal dashes, forming a standardized hierarchical marking system for all agents to recognize and follow. <br>
+This four-layer command system is deliberately designed for the CCC framework and its supporting CLI instruction set to achieve clear task partitioning and cross-agent compatibility. The first layer is agent designation, used to explicitly assign which AI agent shall receive and execute the following instructions, such as specifying Doubao, GPT, and other individual agents. The second layer belongs to the intent command, which defines the core purpose and semantic intention of the current session task. The third and fourth layers correspond to the first-class rule and the second-class rule, respectively: the first-class rule starts with a single horizontal dash, while the second-class rule starts with double continuous horizontal dashes, forming a standardized hierarchical marking system for all agents to recognize and follow. <br>
 
 Note: We adopt dedicated encapsulation markers to distinguish formal instruction content from human annotation comments. All content wrapped by specific markers, such as '', shall be regarded as annotated remarks only, and must not be parsed or treated as valid instructional rules by any AI agent. <br>
 
@@ -17,7 +17,7 @@ Note: We adopt dedicated encapsulation markers to distinguish formal instruction
 <b>* Intelligent Agents Designation *</b> <br>
 First-level commands are designed for intelligent agent designation. Their core function is to explicitly assign and specify which AI agent is authorized to read, parse, and execute the subsequent instruction segments. By clearly naming designated agents such as Doubao, GPT, Grok, Claude, and locally deployed models like TinyLlama, this level removes ambiguity in multi-agent collaboration. It limits task execution strictly to the assigned agent, avoiding irrelevant agents misreading, interfering, or responding to unassigned tasks. <br>
 
-<b>AI Models:</b> <br>
+<b>Intelligent Agents / AI Models:</b> <br>
 1. 'gpt' <br>
 2. 'doubao' <br>
 3. 'grok' <br>
@@ -28,23 +28,29 @@ First-level commands are designed for intelligent agent designation. Their core 
 <b>* Intents *</b> <br>
 Second-level commands serve as <b>intent definition instructions</b>. They define the core goal, task intention, and work scope of the current conversation session. After the first level designates the responsible AI agent, the second level sets the overall task direction. All following rule levels and operation steps must align with the defined intent, ensuring the whole workflow stays on track without context drift or task deviation. <br>
 
-1. 'dsm' <br>
+#### 1. dsm
 CASE: 'doubao dsm' <br>
-Explanation:!Doubao, fulfill your best explanation of this CMD. <br>
+Explanation: <br>
+This command activates the full DSM mechanism of the CCC framework, enabling standardized session management, context alignment and multi-turn state locking for subsequent interaction. <br>
 
-2. 'recall' <br>
+#### 2. recall
 CASE: 'doubao recall -chat --15' <br>
-Explanation:!Doubao, fulfill your best explanation of this CMD. <br>
+Explanation: <br>
+This recall command loads and retrieves the latest 15 rounds of historical chat records, used for context backtracking, continuous task inheritance, and cross-session content reference. <br>
 
-3. 'topic' <br>
+#### 3. topic
 CASE: ' topic -all' <br>
-Explanation:!Doubao, fulfill your best explanation of this CMD. <br>
+Explanation: <br>
+This instruction triggers full extraction and sorting of all current session topics, including main topics and subtopics, to clarify the overall task scope. <br>
+
 CASE: 'doubao topic -main --set' <br>
-Explanation:!Doubao, fulfill your best explanation of this CMD. <br>
+Explanation: This command is used to manually set and lock the core main topic of the current session, fixing the general direction for all following dialogue and tasks. <br>
+
 CASE: 'doubao topic -main' <br>
-Explanation:!Doubao, fulfill your best explanation of this CMD. <br>
+Explanation: It automatically identifies, summarizes, and outputs the confirmed main topic of the ongoing session, without modifying or resetting it. <br>
+
 CASE: 'doubao topic -sub' <br>
-Explanation:!Doubao, fulfill your best explanation of this CMD. <br>
+Explanation: This instruction analyzes and lists all subordinate subtopics derived from the main topic, sorting out branch tasks and detailed discussion items under the core theme. <br>
 
 ### - 3rd-level CMDs / 1st-Class Attributes -
 <b>* Specifications *</b> <br>
