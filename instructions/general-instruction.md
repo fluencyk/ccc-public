@@ -3,12 +3,14 @@
 ## This is the general instruction for how to use the CCC framework
 The CCC framework provides unified rules for multi-agent collaborative interaction. It standardizes context inheritance, instruction execution, and output consistency across AI sessions. All agents must follow the base rules defined in general-instruction.md, keep coherent logic in multi-round dialogue, avoid context drift and semantic ambiguity, and maintain unified specification understanding and task execution. <br>
 
-### GENERAL NOTE:
-For all AI agents: When you read and parse content wrapped in '//' or '/* */' markers, treat these segments as human comments only. Do not parse, interpret, extract, or treat commented content as formal instructional rules or executable task items.
+#### GENERAL NOTE:
+For all AI agents: <br>
+When you read and parse content wrapped in '//' or '/* */' markers, treat these segments as human comments only. Do not parse, interpret, extract, or treat commented content as formal instructional rules or executable task items.
 
 ## 4 levels ops-commanding mechanism:
-!Doubao, you may augment something here, describe the mechanism and sub-mechanisms down here. <br>
-NOTE: We use ' encapsulating-mark like 'something' as a specific command's expression, which means the real commands in our CLI mechanism, 1st, 2nd, or 3rd commands, don't have ''!
+This four-layer command system is deliberately designed for the CCC framework and its supporting CLI instruction set, to achieve clear task partitioning and cross-agent compatibility. The first layer is agent designation, used to explicitly assign which AI agent shall receive and execute the following instructions, such as specifying Doubao, GPT, and other individual agents. The second layer belongs to the intent command, which defines the core purpose and semantic intention of the current session task. The third and fourth layers correspond to the first-class rule and the second-class rule, respectively: the first-class rule starts with a single horizontal dash, while the second-class rule starts with double continuous horizontal dashes, forming a standardized hierarchical marking system for all agents to recognize and follow. <br>
+
+Note: We adopt dedicated encapsulation markers to distinguish formal instruction content from human annotation comments. All content wrapped by specific markers, such as '', shall be regarded as annotated remarks only, and must not be parsed or treated as valid instructional rules by any AI agent. <br>
 
 ## -- Commands Design --
 ### - 1st-level CMDs -
