@@ -9,9 +9,16 @@ The CCC framework uses a dedicated 4-level hierarchical command system, designed
 
 ### Level 1 CMD - Agent Designation
 The first command layer is used to explicitly assign the exclusive AI agent authorized to parse and execute subsequent instructions. It names the target model directly, eliminating task interference from irrelevant agents, restricting instruction execution to the designated subject only, and avoiding cross-model response conflicts.
-Supported designated agents include: gpt, doubao, groq, gemini, claude, and locally deployed models.
+Supported designated agents include: <br>
+- ChatGPT
+- Doubao
+- Grok
+- Gemini
+- Claude
+- locally deployed models, such as TinyLlmma
+
 Standard Example: 
-> gpt dsm
+> gpt rsm
 
 Explicitly assigns subsequent instructions to the GPT model for execution, preventing interference from other agents.
 
@@ -24,9 +31,9 @@ Standard core intents include:
 - topic: Extracts, locks, and sorts the core main topic and subordinate subtopics of the current session to clarify task boundaries
 
 The Command-Line Usage Scenario:
-> doubao dsm
+> doubao rsm
 
-Activates the full CCC session - <b>Restricted Stream Mode</b> management mechanism, ensuring context alignment and multi-round state stability for subsequent interactions.
+Activates the full CCC session, <b>"rsm" - "Restricted Stream Mode"</b> management mechanism, ensuring context alignment and multi-round state stability for subsequent interactions.
 
 ### Level 3 CMD, 1st-Class Attributes / Mandatory Rules
 Marked with a single leading horizontal dash -, this layer defines formal, binding baseline specifications. All designated agents must fully parse, comply with, and execute these rules; they carry official instructional validity and may not be ignored, misread, or treated as casual annotations.
