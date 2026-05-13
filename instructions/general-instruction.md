@@ -20,8 +20,8 @@ First-level commands are designed for intelligent agent designation. Their core 
 
 <b>Intelligent Agents / AI Models:</b> <br>
 #### 1. 'gpt' <br>
-CASE: 'gpt dsm' <br>
-/* Note: The 'dsm' which follows the 1st-level command is a 2nd-level command that has been explained below. */
+CASE: 'gpt rsm' <br>
+/* Note: The 'rsm' which follows the 1st-level command is a 2nd-level command that has been explained below. */
 Explanation: <br>
 This is a first-level command for intelligent agent designation. It explicitly assigns the subsequent instruction tasks to the GPT model only, restricting other AI agents from parsing, responding or interfering with the following session content. <br>
 
@@ -37,10 +37,10 @@ This is a first-level command for intelligent agent designation. It explicitly a
 <b>* Intents *</b> <br>
 Second-level commands serve as <b>intent definition instructions</b>. They define the core goal, task intention, and work scope of the current conversation session. After the first level designates the responsible AI agent, the second level sets the overall task direction. All following rule levels and operation steps must align with the defined intent, ensuring the whole workflow stays on track without context drift or task deviation. <br>
 
-#### 1. dsm
-CASE: 'doubao dsm' <br>
+#### 1. rsm
+CASE: 'doubao rsm' <br>
 Explanation: <br>
-This command activates the full DSM mechanism of the CCC framework, enabling standardized session management, context alignment and multi-turn state locking for subsequent interaction. <br>
+This command activates the full rsm mechanism of the CCC framework, enabling standardized session management, context alignment and multi-turn state locking for subsequent interaction. <br>
 
 #### 2. recall
 CASE: 'doubao recall -chat --15' <br>
