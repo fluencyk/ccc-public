@@ -26,7 +26,7 @@ Explicitly assigns subsequent instructions to the GPT model for execution, preve
 The second command layer locks the core goal, task scope, and session purpose of the current interaction. All subsequent rules and operational steps must align with the defined intent, preventing task deviation and context drift, and keeping the entire workflow focused on the top-level target.
 Standard core intents include:
 
-- dsm: Activates the full CCC standard session management, context alignment, and multi-round state locking mechanism
+- rsm: Activates the full CCC standard session management, context alignment, and multi-round state locking mechanism
 - recall: Loads and retrieves historical session records for context backtracking and cross-session task inheritance
 - topic: Extracts, locks, and sorts the core main topic and subordinate subtopics of the current session to clarify task boundaries
 
